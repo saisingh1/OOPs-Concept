@@ -1,0 +1,306 @@
+    OOPS Concept:-
+  ==================
+ 
+ 1). What is OOPs:-
+====================
+           Object Oriented Programming is metholodhy or pairadigm to design a program using
+               objects and classes is called object oriented programming system.
+
+ 2). What is Objects:-
+=======================
+         Object is the real world enties that has their on properties and behaivours is called objects.
+
+ 3). What is Class:-
+=====================
+        The blueprint from which has their on properties and behaivour are decided or not is called class.
+
+ 4). What is Encapsulation:-
+==============================
+          The process of creating a class by obtainig variables and methods as one unit and then
+               operating variables only through these method is called encapsulations.
+
+   Example:-
+=============
+                    //Encapsulation Progaram
+
+  class EncapsulationDemo
+ {
+	private int      stdNu;
+	private String   stdName;
+	private int      stdAge;
+	private String   stdCourse;
+	private double   stdFees;
+
+    //Getter and setter methoads
+
+	public int getStdNu()
+	{
+	    return stdNu;
+	}
+	public String getStdName()
+	{
+		return stdName;
+	}
+	public int getStdAge()
+	{
+		return stdAge;
+	}
+	public String getStdCourse()
+	{
+		return stdCourse;
+	}
+	public double getStdFees()
+	{
+		return stdFees;
+	}
+	public void setStdNu(int stdNu)
+	{
+		this.stdNu=stdNu;
+	}
+	public void setStdName(String stdName)
+	{
+		this.stdName=stdName;
+	}
+	public void setStdAge(int stdAge)
+	{
+		this.stdAge=stdAge;
+	}
+	public void setStdCourse(String stdCourse)
+	{
+		this.stdCourse=stdCourse;
+	}
+	public void setStdFees(double stdFees)
+	{
+		this.stdFees=stdFees;
+	}
+
+}
+public class EncapsulationTest
+{
+	public static void main(String args[])
+	{
+		EncapsulationDemo ed1=new EncapsulationDemo();
+		{
+			ed1.setStdNu(101);
+			ed1.setStdName("Sai");
+			ed1.setStdAge(20);
+			ed1.setStdCourse("Java");
+			ed1.setStdFees(10000.54);
+
+		  EncapsulationDemo ed2=new EncapsulationDemo();
+
+            ed2.setStdNu(102);
+			ed2.setStdName("Rajan");
+			ed2.setStdAge(22);
+			ed2.setStdCourse("Python");
+			ed2.setStdFees(1100.54);
+
+          EncapsulationDemo ed3=new EncapsulationDemo();
+
+            ed3.setStdNu(103);
+			ed3.setStdName("Lalan");
+			ed3.setStdAge(25);
+			ed3.setStdCourse("Networking");
+			ed3.setStdFees(15000.87);
+
+            System.out.println("STUDENT NU\t\t:"+ed1.getStdNu());
+			System.out.println("STUDENT NAME\t\t:"+ed1.getStdName());
+			System.out.println("STUDENT AGE\t\t:"+ed1.getStdAge());
+			System.out.println("STUDENT COURSE\t\t:"+ed1.getStdCourse());
+			System.out.println("STUDENT FEES\t\t:"+ed1.getStdFees());
+
+            System.out.println("\nSTUDENT NU\t\t:"+ed2.getStdNu());
+			System.out.println("STUDENT NAME\t\t:"+ed2.getStdName());
+			System.out.println("STUDENT AGE\t\t:"+ed2.getStdAge());
+			System.out.println("STUDENT COURSE\t\t:"+ed2.getStdCourse());
+			System.out.println("STUDENT FEES\t\t:"+ed2.getStdFees());
+
+			System.out.println("\nSTUDENT NU\t\t:"+ed3.getStdNu());
+			System.out.println("STUDENT NAME\t\t:"+ed3.getStdName());
+			System.out.println("STUDENT AGE\t\t:"+ed3.getStdAge());
+			System.out.println("STUDENT COURSE\t\t:"+ed3.getStdCourse());
+			System.out.println("STUDENT FEES\t\t:"+ed3.getStdFees());
+		}
+	}
+}
+
+
+ 5). What is Inheirtance:-
+===========================
+          The process of creating a new object by obtainig types properties and behaivours  of an existing 
+               object is called inheirtance.
+   Example:-
+  ===========
+                     //Inheritance Progarm
+
+class Example 
+{
+	static int a=10;
+	int x=20;
+}
+
+class Sample extends Example
+{
+
+	public static void main(String[] args) 
+	{
+		System.out.println(a);
+		System.out.println(Sample.a);
+
+		Sample s=new Sample();
+		System.out.println(s.x);
+	}
+}
+
+ 6). How many types of inheirtance in java:-
+===========================================
+     There are 3 types of inheirtance in java-
+        1). single level     2).multi level      3). hiharical.
+
+ 7). What is Polymorphism:-
+===========================
+         polymorphism is the property of an object which allows it to take the multiples forms is called 
+              polymorphism.
+  Example:-
+ ==========
+                          //Polymorphism Progarm
+
+class Example 
+{
+	static void m1()
+	{
+          System.out.println("Example m1");
+	}
+	void m2()
+	{
+		System.out.println("Example m2");
+	}
+	void m3()
+	{
+		System.out.println("Example m3()");
+	}
+	void m4()
+	{
+		System.out.println("Example m4(no-param)");
+	}
+}
+
+	class Sample_001 extends Example
+	{
+		static void m1()
+		{
+			System.out.println("Sample m1");
+		}
+		void m2()
+		{
+			System.out.println("Sample m2");
+		}
+		void m4(String s)
+		{
+			System.out.println("Sample m3(int-param)");
+		}
+	
+	public static void main(String[] args) 
+	{
+		//System.out.println("Hello World!");
+		Sample_001 s=new Sample_001();
+
+		s.m1();
+		s.m2();
+		s.m3();
+		s.m4();
+		s.m4("HK");
+
+		Example e=new Example();
+
+		e.m1();
+		e.m2();
+		e.m3();
+        e.m4();
+		//e.m4("HK");
+
+	}
+}
+
+
+
+ 8). How can we develop polymorphism in java:-
+===============================================
+       In 2 ways develop polymorphism in java-
+        1). By using overriding method.
+        2). By using overloading method.
+
+ 9). What is Overriding Method:-
+================================
+       Redefining super class non static method and sub class with same parameter for providing new 
+          implementations logic as per sub class needs is called method overriding.
+ 
+ 10). What is Overloading Method:-
+==================================
+       Defining multiple method with same name with deferent parameter types order is called method overloading.....
+ 11). How many types of polymorphism in java:-
+===============================================
+      There are 2 types-
+   1). compiler time polymorphism in java-overloading method.
+   2). run-time polymorphism in java-overriding method.
+
+ 12). What is the differnt b/w overriding and overloading:-
+==============================================================
+          1). Overriding-:
+          ================
+               * We can not override the final method.
+               * we can not override the private method.
+               * overriding is a runtime polymorphism.
+               * we can override only in sub class.
+          2). Overloading:-
+          =================
+               * we can override the final method.
+               * we can override the private method.
+               * overloading is a compiler-time polymorphism.
+               * we can override in same class with in sub class.
+
+ 13). What is Abstraction.
+ 14). How can we develop abstraction in java:-
+==================================================
+  There are 2 ways develop abstraction in java-
+     1). Abstract class and
+      2). Interface.
+
+ 15). What is Abstract Method:-
+===============================
+        A method that has only prototype and does not have any body is called the abstract method.
+
+ 16). What is Abstract Class:-
+==============================
+        A class that is declared with abstract modifier is called abstract class...
+
+ 17). What is Interface:-
+===========================
+     -> Interface supported multiple inheritance.
+     -> Interface dosen't contains constructor.
+     -> Interface dosen't contains data member.
+     -> Member of interface can not be static.
+   Example:-
+============
+              interface Pet{
+                  public void test();
+             }
+            class Dog implements Pet{
+               public void test(){
+                     System.out.println("Interface Method");
+              }
+                  public static void main(String args[]){
+                       Pet p=new Pet();
+                      p.test();
+                }
+           }
+
+ 18). How can we develop encapsulation in java:-
+=================================================
+  There are 2 ways develop encapsulation in java-
+    1). By declaring all variables as private..
+    2). By defining one pair of public setter and getter method..
+
+ 19). What is the different b/w Abstract class and Interface.
+
+
